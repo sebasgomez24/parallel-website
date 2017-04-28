@@ -52,98 +52,12 @@ nav
 	font-family: montserrat-light
 	position: relative
 
-.box-white
-	@include box
-	background: white
-	height: 1850px
-	text-align: center
-	.btn.btn-default
-		background: transparent
-		border: 1px solid $parallels_color
-		&:hover
-			background: $parallels_color
-	.centered-text
-		padding: 0 25px
-		left: 50%
-		transform: translate(-50%, 0) !important
-	&:first-of-type
-		background: url('/static/images/Up_Shadow.png')
-		background-size: cover
-		overflow: hidden
-		text-align: left
-		height: 1000px
-		.centered-text
-			top: 50% !important
-			left: 0 !important
-			transform: translate(0, -50%) !important
-			h1
-				margin-top: -100px
-	h1
-		top: 50%
-	img
-		height: 400px
-		// @ md-lg height: 500px
-
-.box-color
-	@include box
-	background: $parallels_color
-	color: white
-	height: 1500px
-	img
-		height: 300px
-	.sml
-		height: 300px
-		margin-bottom: -100px
-	.lrg
-		height: 500px
-		.centered-text
-			padding: 0
-			width: 75%
-	h4
-		text-align: justify
-
-.box-image
-	@include box
-	background: url('/static/images/meeting.jpg')
-	color: white
-	background-size: cover
-	overflow: hidden
-
-.box-black
-	@include box
-	height: 1750px
-	background: black
-	color: white
-	text-align: center
-	span
-		color: #00E7E7 //$parallels_color
-	img
-		height: 250px
-	.centered-outside:first-of-type
-		height: 400px
-	.centered-outside:nth-of-type(2)
-		height: 800px
-	.centered-text:first-of-type
-		top: 0
-		transform: translate(0, 0)
-	&:last-of-type
-		img
-			height: 75px
-		.centered-text
-			top: 50% !important
-			transform: translate(0, -50%)
-	.fullpage
-		height: 100%
-		width: 100%
-		overflow: hidden
-		background-size: cover
-		background: black
-
 .centered-outside
 	height: 500px
 	// @ md-lg height: 1000px
 	position: relative
 	.centered-text
+		width: 100%
 		margin: 0
 		position: absolute
 		left: 50%
@@ -158,27 +72,135 @@ nav
 		top: 50%
 		transform: translate(-50%, -50%)
 
-.colored
-	color: white
-	background: $parallels_color
-	border: 1px solid white
-	padding: 15px 50px
-	border-radius: 2.5px
-	position: absolute
-	left: 50%
-	transform: translate(-50%, 0)
-	a
-		color: white
+.box-white
+	@include box
+	background: white
+	height: 1850px
+	text-align: center
+	.btn.btn-default
+		background: transparent
+		border: 1px solid $parallels_color
+		&:hover
+			background: $parallels_color
+	&:first-of-type
+		background: url('/static/images/Up_Shadow.png')
+		background-size: cover
+		overflow: hidden
+		text-align: left
+		height: 1000px
+		h1
+			margin-top: -100px
+	img
+		height: 400px
+		// @ md-lg height: 500px
+	.title
+		height: 300px
+	.image-row
+		height: 250px
+		img
+			height: 200px
+	.text-row
+		height: 250px	
 
-.image-btn
+.box-color
+	@include box
+	background: $parallels_color
 	color: white
-	background: none
-	border: 1px solid white
-	padding: 15px 50px
-	border-radius: 2.5px
-	position: absolute
-	left: 50%
-	transform: translate(-50%, 0)
+	height: 1800px
+	h4
+		text-align: justify
+	img
+		height: 250px
+	.sml
+		height: 250px
+		margin-bottom: -200px
+	.lrg
+		height: 700px
+		.centered-text
+			padding: 0
+			width: 80%	
+	.colored
+		color: white
+		background: $parallels_color
+		border: 1px solid white
+		padding: 15px 50px
+		border-radius: 2.5px
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+		a
+			color: white
+
+.box-black
+	@include box
+	//height: 1750px
+	height: 1350px
+	background: black
+	color: white
+	text-align: center
+	span
+		color: #00E7E7 //$parallels_color
+	img
+		height: 250px	
+	.fullpage
+		height: 100%
+		width: 100%
+		overflow: hidden
+		background-size: cover
+		background: black
+	.black-page-icon
+		height: 400px
+	.black-page-text
+		height: 750px
+	&:last-of-type
+		height: 3000px
+		img
+			height: 75px
+		.disclaimer-container
+			width: 100%
+			//width: 900px
+		.disclaimer
+			height: 1100px !important
+			margin-top: 50px
+			p
+				text-align: justify
+				padding: 25px
+		.links
+			height: 150px !important
+			img
+				height: 35px !important
+				margin: 0 25px 0 15px
+		.socialmedia
+			height: 150px !important
+			img
+				height: 50px !important
+		.centered-outside.download
+			height: 200px
+		
+
+.box-image
+	@include box
+	background: url('/static/images/meeting.jpg')
+	color: white
+	background-size: cover
+	overflow: hidden
+	height: 600px
+	.centered-image
+		width: 100%
+		h1
+			text-align: center
+	.image-btn
+		color: white
+		background: none
+		border: 1px solid white
+		padding: 15px 50px
+		border-radius: 2.5px
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+
+
+/* Use this section to add BOOTSTRAP OVERRIDES only */
 
 .btn.btn-default.image-btn:hover
 	background: white
@@ -201,47 +223,34 @@ nav
 	color: white
 	background: $parallels_color
 
-.black-page-icon
-	height: 450px !important
-
-.black-page-text
-	height: 750px !important
-
-.title
-	height: 200px	
-
-.image-row
-	height: 250px
-	img
-		height: 200px
-
-.text-row
-	height: 250px
-
-.download
-	height: 200px !important
-
-.links
-	height: 150px !important
-	img
-		height: 35px !important
-		margin: 0 25px 0 15px
-
-.socialmedia
-	height: 150px !important
-	img
-		height: 50px !important
-
-.disclaimer-container
-	width: 900px
-
-.disclaimer
-	height: 600px !important
-	margin-top: 50px
-	p
-		text-align: justify
-		padding: 25px
-
 /* Keyframes */
 
 /* Media Queries */
+
+/*==========  Mobile First Method  ==========*/
+
+	/* Custom, iPhone Retina */
+	@media only screen and (min-width : 320px){
+		.black-page-text
+			h1
+	}
+
+	/* Extra Small Devices, Phones */
+	@media only screen and (min-width : 480px){
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (min-width : 768px){
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (min-width : 992px){
+
+	}
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (min-width : 1200px){
+
+	}

@@ -34,103 +34,11 @@ nav {
     padding-right: 15px; }
 
 /* Front page styles from top of page to bottom */
-.box-white {
-  height: 1000px;
-  font-family: montserrat-light;
-  position: relative;
-  background: white;
-  height: 1850px;
-  text-align: center; }
-  .box-white .btn.btn-default {
-    background: transparent;
-    border: 1px solid #3B6F7C; }
-    .box-white .btn.btn-default:hover {
-      background: #3B6F7C; }
-  .box-white .centered-text {
-    padding: 0 25px;
-    left: 50%;
-    transform: translate(-50%, 0) !important; }
-  .box-white:first-of-type {
-    background: url("/static/images/Up_Shadow.png");
-    background-size: cover;
-    overflow: hidden;
-    text-align: left;
-    height: 1000px; }
-    .box-white:first-of-type .centered-text {
-      top: 50% !important;
-      left: 0 !important;
-      transform: translate(0, -50%) !important; }
-      .box-white:first-of-type .centered-text h1 {
-        margin-top: -100px; }
-  .box-white h1 {
-    top: 50%; }
-  .box-white img {
-    height: 400px; }
-
-.box-color {
-  height: 1000px;
-  font-family: montserrat-light;
-  position: relative;
-  background: #3B6F7C;
-  color: white;
-  height: 1500px; }
-  .box-color img {
-    height: 300px; }
-  .box-color .sml {
-    height: 300px;
-    margin-bottom: -100px; }
-  .box-color .lrg {
-    height: 500px; }
-    .box-color .lrg .centered-text {
-      padding: 0;
-      width: 75%; }
-  .box-color h4 {
-    text-align: justify; }
-
-.box-image {
-  height: 1000px;
-  font-family: montserrat-light;
-  position: relative;
-  background: url("/static/images/meeting.jpg");
-  color: white;
-  background-size: cover;
-  overflow: hidden; }
-
-.box-black {
-  height: 1000px;
-  font-family: montserrat-light;
-  position: relative;
-  height: 1750px;
-  background: black;
-  color: white;
-  text-align: center; }
-  .box-black span {
-    color: #00E7E7; }
-  .box-black img {
-    height: 250px; }
-  .box-black .centered-outside:first-of-type {
-    height: 400px; }
-  .box-black .centered-outside:nth-of-type(2) {
-    height: 800px; }
-  .box-black .centered-text:first-of-type {
-    top: 0;
-    transform: translate(0, 0); }
-  .box-black:last-of-type img {
-    height: 75px; }
-  .box-black:last-of-type .centered-text {
-    top: 50% !important;
-    transform: translate(0, -50%); }
-  .box-black .fullpage {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background: black; }
-
 .centered-outside {
   height: 500px;
   position: relative; }
   .centered-outside .centered-text {
+    width: 100%;
     margin: 0;
     position: absolute;
     left: 50%;
@@ -145,28 +53,138 @@ nav {
     top: 50%;
     transform: translate(-50%, -50%); }
 
-.colored {
-  color: white;
+.box-white {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  background: white;
+  height: 1850px;
+  text-align: center; }
+  .box-white .btn.btn-default {
+    background: transparent;
+    border: 1px solid #3B6F7C; }
+    .box-white .btn.btn-default:hover {
+      background: #3B6F7C; }
+  .box-white:first-of-type {
+    background: url("/static/images/Up_Shadow.png");
+    background-size: cover;
+    overflow: hidden;
+    text-align: left;
+    height: 1000px; }
+    .box-white:first-of-type h1 {
+      margin-top: -100px; }
+  .box-white img {
+    height: 400px; }
+  .box-white .title {
+    height: 300px; }
+  .box-white .image-row {
+    height: 250px; }
+    .box-white .image-row img {
+      height: 200px; }
+  .box-white .text-row {
+    height: 250px; }
+
+.box-color {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
   background: #3B6F7C;
-  border: 1px solid white;
-  padding: 15px 50px;
-  border-radius: 2.5px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0); }
-  .colored a {
-    color: white; }
-
-.image-btn {
   color: white;
-  background: none;
-  border: 1px solid white;
-  padding: 15px 50px;
-  border-radius: 2.5px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0); }
+  height: 1800px; }
+  .box-color h4 {
+    text-align: justify; }
+  .box-color img {
+    height: 250px; }
+  .box-color .sml {
+    height: 250px;
+    margin-bottom: -200px; }
+  .box-color .lrg {
+    height: 700px; }
+    .box-color .lrg .centered-text {
+      padding: 0;
+      width: 80%; }
+  .box-color .colored {
+    color: white;
+    background: #3B6F7C;
+    border: 1px solid white;
+    padding: 15px 50px;
+    border-radius: 2.5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    .box-color .colored a {
+      color: white; }
 
+.box-black {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  height: 1350px;
+  background: black;
+  color: white;
+  text-align: center; }
+  .box-black span {
+    color: #00E7E7; }
+  .box-black img {
+    height: 250px; }
+  .box-black .fullpage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background: black; }
+  .box-black .black-page-icon {
+    height: 400px; }
+  .box-black .black-page-text {
+    height: 750px; }
+  .box-black:last-of-type {
+    height: 3000px; }
+    .box-black:last-of-type img {
+      height: 75px; }
+    .box-black:last-of-type .disclaimer-container {
+      width: 100%; }
+    .box-black:last-of-type .disclaimer {
+      height: 1100px !important;
+      margin-top: 50px; }
+      .box-black:last-of-type .disclaimer p {
+        text-align: justify;
+        padding: 25px; }
+    .box-black:last-of-type .links {
+      height: 150px !important; }
+      .box-black:last-of-type .links img {
+        height: 35px !important;
+        margin: 0 25px 0 15px; }
+    .box-black:last-of-type .socialmedia {
+      height: 150px !important; }
+      .box-black:last-of-type .socialmedia img {
+        height: 50px !important; }
+    .box-black:last-of-type .centered-outside.download {
+      height: 200px; }
+
+.box-image {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  background: url("/static/images/meeting.jpg");
+  color: white;
+  background-size: cover;
+  overflow: hidden;
+  height: 600px; }
+  .box-image .centered-image {
+    width: 100%; }
+    .box-image .centered-image h1 {
+      text-align: center; }
+  .box-image .image-btn {
+    color: white;
+    background: none;
+    border: 1px solid white;
+    padding: 15px 50px;
+    border-radius: 2.5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+
+/* Use this section to add BOOTSTRAP OVERRIDES only */
 .btn.btn-default.image-btn:hover {
   background: white;
   color: #3B6F7C; }
@@ -188,48 +206,34 @@ nav {
   color: white;
   background: #3B6F7C; }
 
-.black-page-icon {
-  height: 450px !important; }
-
-.black-page-text {
-  height: 750px !important; }
-
-.title {
-  height: 200px; }
-
-.image-row {
-  height: 250px; }
-  .image-row img {
-    height: 200px; }
-
-.text-row {
-  height: 250px; }
-
-.download {
-  height: 200px !important; }
-
-.links {
-  height: 150px !important; }
-  .links img {
-    height: 35px !important;
-    margin: 0 25px 0 15px; }
-
-.socialmedia {
-  height: 150px !important; }
-  .socialmedia img {
-    height: 50px !important; }
-
-.disclaimer-container {
-  width: 900px; }
-
-.disclaimer {
-  height: 600px !important;
-  margin-top: 50px; }
-  .disclaimer p {
-    text-align: justify;
-    padding: 25px; }
-
 /* Keyframes */
 /* Media Queries */
+/*==========  Mobile First Method  ==========*/
+ *
+ * /* Custom, iPhone Retina */
+ * @media only screen and (min-width : 320px){
+ * 	.black-page-text
+ * 		h1
+ * }
+ *
+ * /* Extra Small Devices, Phones */
+ * @media only screen and (min-width : 480px){
+ *
+ * }
+ *
+ * /* Small Devices, Tablets */
+ * @media only screen and (min-width : 768px){
+ *
+ * }
+ *
+ * /* Medium Devices, Desktops */
+ * @media only screen and (min-width : 992px){
+ *
+ * }
+ *
+ * /* Large Devices, Wide Screens */
+ * @media only screen and (min-width : 1200px){
+ *
+ * } */
 
 /*# sourceMappingURL=main.css.map */
