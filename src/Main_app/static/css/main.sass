@@ -1,10 +1,42 @@
 /* Variables */
 
 $parallels_color: #3B6F7C
-$bp-small : 24em
-$bp-med : 46.8em
-$bp-large : 50em
-$bp-xl : 73em
+$bp_xs: 320
+$bp_s: 480
+$bp_m: 768
+$bp_l: 992
+$bp_xl: 1200
+
+$box_1 : 1000px
+$box_2 : 1800px
+$box_3 : 1350px
+$box_4 : 1850px 
+$box_5 : 600px
+$box_6 : 3000px
+
+$box_1-img : 400px
+$box_2-img : 250px
+$box_3-img : 250px
+$box_4-img : 200px
+$app_button : 75px 
+$flags : 35px
+$icons : 50px
+
+$box-color_lrg : 700px
+$box-color_med : 600px
+$box-color_sml : 250px
+
+$disclaimer : 1100px
+
+$centered-outside : 500px
+
+$bp-icon : 400px
+$bp-text : 750px
+
+/* SASS Functions and Mixins */
+
+@function calc-percent($target, $container)
+	@return ($target/$container) * 100%
 
 /* Font-face */
 
@@ -53,7 +85,7 @@ nav
 	position: relative
 
 .centered-outside
-	height: 500px
+	height: $centered-outside
 	// @ md-lg height: 1000px
 	position: relative
 	.centered-text
@@ -75,7 +107,7 @@ nav
 .box-white
 	@include box
 	background: white
-	height: 1850px
+	height: $box_4
 	text-align: center
 	.btn.btn-default
 		background: transparent
@@ -87,18 +119,18 @@ nav
 		background-size: cover
 		overflow: hidden
 		text-align: left
-		height: 1000px
+		height: $box_1
 		h1
 			margin-top: -100px
-	img
-		height: 400px
+		img
+			height: $box_1-img
 		// @ md-lg height: 500px
 	.title
 		height: 300px
 	.image-row
 		height: 250px
 		img
-			height: 200px
+			height: $box_4-img
 	.text-row
 		height: 250px	
 
@@ -106,16 +138,18 @@ nav
 	@include box
 	background: $parallels_color
 	color: white
-	height: 1800px
+	height: $box_2
 	h4
 		text-align: justify
 	img
-		height: 250px
+		height: $box_2-img
 	.sml
-		height: 250px
+		height: $box-color_sml
 		margin-bottom: -200px
+	.med
+		height: $box-color_med
 	.lrg
-		height: 700px
+		height: $box-color_lrg
 		.centered-text
 			padding: 0
 			width: 80%	
@@ -134,14 +168,14 @@ nav
 .box-black
 	@include box
 	//height: 1750px
-	height: 1350px
+	height: $box_3
 	background: black
 	color: white
 	text-align: center
 	span
 		color: #00E7E7 //$parallels_color
 	img
-		height: 250px	
+		height: $box_3-img
 	.fullpage
 		height: 100%
 		width: 100%
@@ -149,31 +183,31 @@ nav
 		background-size: cover
 		background: black
 	.black-page-icon
-		height: 400px
+		height: $bp-icon
 	.black-page-text
-		height: 750px
+		height: $bp-text
 	&:last-of-type
-		height: 3000px
+		height: $box_6
 		img
-			height: 75px
+			height: $app_button
 		.disclaimer-container
 			width: 100%
 			//width: 900px
 		.disclaimer
-			height: 1100px !important
+			height: $disclaimer
 			margin-top: 50px
 			p
 				text-align: justify
 				padding: 25px
 		.links
-			height: 150px !important
+			height: 150px
 			img
-				height: 35px !important
+				height: $flags
 				margin: 0 25px 0 15px
 		.socialmedia
 			height: 150px !important
 			img
-				height: 50px !important
+				height: $icons
 		.centered-outside.download
 			height: 200px
 		
@@ -184,7 +218,7 @@ nav
 	color: white
 	background-size: cover
 	overflow: hidden
-	height: 600px
+	height: $box_5
 	.centered-image
 		width: 100%
 		h1
@@ -223,34 +257,118 @@ nav
 	color: white
 	background: $parallels_color
 
-/* Keyframes */
+/*==========  Media Queries Mobile First Method  ==========*/
 
-/* Media Queries */
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	$box_2 : 1800px
+	$box_2-img : 300px
 
-/*==========  Mobile First Method  ==========*/
+	.box-color
+		height: $box_2
+		img
+			height: $box_2-img
 
-	/* Custom, iPhone Retina */
-	@media only screen and (min-width : 320px){
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	$box_2 : 1500px
+	$box_2-img : 400px
+	$box_6 : 2050px
+	$box-color_sml : 450px
+	$box-color_med : 500px
+	$box-color_lrg : 600px
+	$disclaimer : 600px
+
+	.box-color
+		height: $box_2
+		img
+			height: $box_2-img
+		.sml
+			height: $box-color_sml
+		.med
+			height: $box-color_med
+		.lrg
+			height: $box-color_lrg
+
+	.box-black:last-of-type
+		height: $box_6
+		.disclaimer
+			height: $disclaimer
+	
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	$centered-outside : 1000px
+	$box_2 : 1250px
+	$box_3 : 1000px
+	$box_5 : 1000px
+	$box_6 : 1500px
+	$black-page-icon : 350px
+	$black-page-text : 600px
+	$box-color_sml : 350px
+	$icons: 30px
+	$box_1-img : 550px
+
+	.centered-outside
+		height: $centered-outside
+
+	.box-white:first-of-type
+		img
+			height: $box_1-img
+
+	.box-color
+		height: $box_2
+		.sml
+			height: $box-color_sml
+			margin: 0
+
+	.box-black
+		height: $box_3
+		.black-page-icon
+			height: $black-page-icon
 		.black-page-text
+			height: $black-page-text
 			h1
-	}
+				margin-top: -75px
+			h4
+				font-size: 20px
 
-	/* Extra Small Devices, Phones */
-	@media only screen and (min-width : 480px){
+	.box-white
+		p
+			padding: 0 10%
 
-	}
+	.box-image
+		height: $box_5
 
-	/* Small Devices, Tablets */
-	@media only screen and (min-width : 768px){
+	.box-black:last-of-type
+		height: $box_6
+		.socialmedia
+			img
+				height: $icons
 
-	}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	$box_6 : 1250px
 
-	/* Medium Devices, Desktops */
-	@media only screen and (min-width : 992px){
+	.centered-text
+		padding: 0 50px
 
-	}
+	.centered-image
+		padding: 0 50px
 
-	/* Large Devices, Wide Screens */
-	@media only screen and (min-width : 1200px){
+	.box-black:last-of-type
+		height: $box_6
+		.disclaimer-container
+			width: 900px
 
-	}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.centered-text
+		padding: 0 10%
+
+@media only screen and (min-width : 1700px)
+	.centered-text
+		padding: 0 25%
+
+	.box-white:first-of-type
+		.centered-text
+			padding: 0 10%
